@@ -13,7 +13,7 @@ GameFile = r""
 #-----------------------------------------------
 def JeuLance():
     global Textures,TextureBtn,Games,GamesBtn,Txt3,Image
-    Txt2.config(text="Bienvenue sur PYXEL DASH! Veuillez choisir un pack de Texture.\n",bg=MainColor,fg=SecondColor,font=("Comic Sans MS", 20, "bold"))
+    Txt2.config(text="Welcome to PYXEL DASH! Please choose a Texture Pack.\n",bg=MainColor,fg=SecondColor,font=("Comic Sans MS", 20, "bold"))
     Txt3.destroy()
     Image.destroy()
     del Txt3,Image
@@ -42,8 +42,8 @@ def TextureDef(Texture):
         GameFile = Game + ".py"
         for GameB in GamesBtn:
             GameB.destroy()
-        Txt2.config(text=f"Vous avez choisi:\nTextures: {TextureFile[:TextureFile.index('.')]}\nJeu: {GameFile[:GameFile.index('.')]}")
-        Txt3 = tk.Label(text="\n\nLANCEMENT DU JEU\n",bg=MainColor,fg=SecondColor,font=("Comic Sans MS", 20, "bold"))
+        Txt2.config(text=f"You chose\nTextures: {TextureFile[:TextureFile.index('.')]}\nGame: {GameFile[:GameFile.index('.')]}")
+        Txt3 = tk.Label(text="\n\nLOADING THE GAME...\n",bg=MainColor,fg=SecondColor,font=("Comic Sans MS", 20, "bold"))
         Txt3.pack()
         Image = tk.Label(image=GDImg,bg=MainColor,fg=SecondColor)
         Image.pack()
@@ -54,7 +54,7 @@ def TextureDef(Texture):
     TextureFile = Texture + ".pyxres"
     for TextureB in TextureBtn:
         TextureB.destroy()
-    Txt2.config(text="Veuillez choisir un mode de Jeu.\n")
+    Txt2.config(text="Please choose a Game Mode\n")
     Games = []
     GamesBtn = []
     for nom_fichier in os.listdir("Games"):
@@ -78,7 +78,7 @@ fenetre.geometry("920x720+50+50")
 fenetre.configure(bg=MainColor)
 Txt1 = tk.Label(text="PYXEL DASH\n",bg=MainColor,fg=SecondColor,font=("Comic Sans MS", 40, "bold"))
 Txt1.pack()
-Txt2 = tk.Label(text="Bienvenue sur PYXEL DASH! Veuillez choisir un pack de Texture.\n",bg=MainColor,fg=SecondColor,font=("Comic Sans MS", 20, "bold"))
+Txt2 = tk.Label(text="Welcome to PYXEL DASH! Please choose a Texture Pack.\n",bg=MainColor,fg=SecondColor,font=("Comic Sans MS", 20, "bold"))
 Txt2.pack()
 Textures = []
 TextureBtn = []
