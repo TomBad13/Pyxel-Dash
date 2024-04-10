@@ -32,7 +32,7 @@ def JeuLance():
     subprocess.run(["python", "Games\{}".format(GameFile), TextureFile])    
     with open(r"PointsLog.txt", "r") as f:
         readed = f.read()
-    PtsTxt.config(bg=MainColor,text=f"Vous avez {readed} victoires",font=("Comic Sans MS", 20, "bold"), fg=SecondColor)
+    PtsTxt.config(bg=MainColor,text=f"You have {readed} wins!",font=("Comic Sans MS", 20, "bold"), fg=SecondColor)
 
 
 
@@ -94,6 +94,6 @@ for TextureB in TextureBtn:
 
 with open(r"PointsLog.txt", "r") as f:
     readed = f.read()
-PtsTxt = tk.Label(bg=MainColor,text=f"Vous avez {readed} victoires",font=("Comic Sans MS", 20, "bold"), fg=SecondColor)
+PtsTxt = tk.Label(bg=MainColor,text=f"You have {readed} wins!",font=("Comic Sans MS", 20, "bold"), fg=SecondColor)
 PtsTxt.pack(side="bottom")
 fenetre.mainloop()
