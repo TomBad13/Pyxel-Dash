@@ -34,7 +34,11 @@ There is an option to see how much Wins you got. However it's easy to cheat to g
     ```bash
     cd Pyxel-Dash
     ```
-4. Execute it with:
+4. Install Requirements:
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Execute it with:
 
     ```bash
     python main.py
